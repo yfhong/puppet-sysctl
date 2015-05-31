@@ -1,4 +1,5 @@
 # Managed by puppet
-<% @entries.each do |key, value| -%>
-<%= name %> = <%= value %>
+<% keys = @entries.keys.sort -%>
+<% keys.each do |key| -%>
+<%= "#{key} = #{entries[key]}" %>
 <% end -%>
