@@ -6,6 +6,13 @@ class sysctl::config {
 
   $entries = hiera_hash('sysctl::entries')
 
+  file { $::sysctl::confdir:
+    ensure => 'directory',
+    owner  => 'root',
+    group  => $::sysctl::params::root_group,
+    mode   => '0750',
+  }
+
   file { $::sysctl::customized_file:
     ensure  => 'present',
     owner   => 'root',
