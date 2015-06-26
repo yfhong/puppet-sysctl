@@ -11,6 +11,10 @@
     {
       "name": "puppetlabs-stdlib",
       "version_requirement": ">= 1.0.0"
+    },
+    {
+      "name": "augeasproviders_sysctl",
+      "version_requirement": ">= 2.0.2"
     }
   ],
   "operatingsystem_support": [

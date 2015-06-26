@@ -16,7 +16,6 @@ class sysctl (
 
   # validate parameters here
 
-  class { '::sysctl::config': } ~>
-  class { '::sysctl::service': } ->
+  class { '::sysctl::config': } ->
   Class['::sysctl']
 }
